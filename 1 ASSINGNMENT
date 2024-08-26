@@ -1,0 +1,895 @@
+{
+ "cells": [
+  {
+   "cell_type": "markdown",
+   "id": "9addf74c-dc29-400c-9e33-e2407b0d1bc9",
+   "metadata": {},
+   "source": [
+    "(1) Explain the key features of python that make it popular choice for programming \n",
+    "\n",
+    "\n",
+    "Python has gained immense popularity as a programming language due to several key features that cater to a wide range of progrramming needs. Here are some of the most important features that make Python a popular choice:\n",
+    "\n",
+    "Easy to Learn and Read: Python's syntax is clear and easy to understand, which makes it accessible for beginners. Its use of indentation to define code blocks helps in writing readable and clean code.\n",
+    "\n",
+    "Versatile and General-Purpose: Python is a general-purpose language, meaning it can be used for a wide variety of applications, including web development, data analysis, artificial intelligence, scientific computing, automation, and more.\n",
+    "\n",
+    "Large Standard Library: Python comes with a rich standard library that provides modules and functions for many tasks, such as file I/O, system calls, and even web development. This allows developers to avoid reinventing the wheel and leverage pre-built functionality.\n",
+    "\n",
+    "Cross-Platform Compatibility: Python is cross-platform, meaning that code written on one operating system (Windows, macOS, Linux) can usually be run on others with little or no"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "33405d88-cbb1-4055-881a-2b63586bf89a",
+   "metadata": {},
+   "source": [
+    "(2)  Describe the role of predefined keywords in python and provide example of how they are used in a programm \n",
+    "\n",
+    "In Python, predefined keywords are reserved words that have special meanings and purposes in the language. They are used to define the syntax and structure of Python code. Keywords cannot be used as identifiers (such as variable names, function names, or class names) because they are integral to the language’s functionality.\n",
+    "\n",
+    "Roles of Predefined Keywords >>>>>>\n",
+    "\n",
+    "\n",
+    "1 Control Flow: Keywords like if, else, elif, for, and while help in controlling the flow of execution in a program.\n",
+    "2 Function Definition: Keywords like def are used to define functions, while return specifies the value a function should return.\n",
+    "3 Class Definition: Keywords like class are used to define classes, and self refers to the instance of the class within its methods.\n",
+    "4 Exception Handling: Keywords like try, except, finally, and raise are used to handle exceptions and errors.\n",
+    "5 Data Structures: Keywords like import and from are used to include and manage external modules and libraries.\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 1,
+   "id": "c9e2e3ce-2b3c-4a6c-a4c7-f065e7da1727",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "The number is positive.\n"
+     ]
+    }
+   ],
+   "source": [
+    "#EXAMPLES >>\n",
+    "\n",
+    "# Define a variable\n",
+    "\n",
+    "number = 15\n",
+    "\n",
+    "# Control flow using if, elif, and else\n",
+    "if number > 0:\n",
+    "    print(\"The number is positive.\")\n",
+    "elif number == 0:\n",
+    "    print(\"The number is zero.\")\n",
+    "else:\n",
+    "    print(\"The number is negative.\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "580b1e89-847e-49eb-9c44-478d8d1dde9b",
+   "metadata": {},
+   "source": [
+    "(3) compare and contrast mutable and immutable object in python with examples\n",
+    "\n",
+    "Mutable Objects >>\n",
+    "\n",
+    "Definition: Mutable objects are those whose state or value can be changed after they are created.\n",
+    "\n",
+    "Examples: Lists, dictionaries, and sets are common mutable types in Python."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 4,
+   "id": "3d7c692c-6bed-4060-b253-b103d0be1316",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Original list: [10, 20, 30, 40, 50]\n",
+      "After appending 60: [10, 20, 30, 40, 50, 60]\n",
+      "After inserting 25 at index 2: [10, 20, 25, 30, 40, 50, 60]\n",
+      "After updating the first element to 100: [100, 20, 25, 30, 40, 50, 60]\n",
+      "After appending 60: [100, 20, 25, 30, 40, 50, 60, 60]\n",
+      "After inserting 25 at index 2: [100, 20, 25, 25, 30, 40, 50, 60, 60]\n",
+      "After popping the element at index 3: [100, 20, 25, 30, 40, 50, 60, 60]\n",
+      "Removed element: 25\n",
+      "After extending with [70, 80, 90]: [100, 20, 25, 30, 40, 50, 60, 60, 70, 80, 90]\n",
+      "After clearing all elements: []\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Create an initial list\n",
+    "my_list = [10, 20, 30, 40, 50]\n",
+    "print(\"Original list:\", my_list)\n",
+    "\n",
+    "# Append a new element to the list\n",
+    "my_list.append(60)\n",
+    "print(\"After appending 60:\", my_list)\n",
+    "\n",
+    "# Insert an element at a specific position\n",
+    "my_list.insert(2, 25)  # Insert 25 at index 2\n",
+    "print(\"After inserting 25 at index 2:\", my_list)\n",
+    "\n",
+    "# Update an element in the list\n",
+    "my_list[0] = 100\n",
+    "print(\"After updating the first element to 100:\", my_list)\n",
+    "# Append a new element to the list\n",
+    "my_list.append(60)\n",
+    "print(\"After appending 60:\", my_list)\n",
+    "\n",
+    "# Insert an element at a specific position\n",
+    "my_list.insert(2, 25)  # Insert 25 at index 2\n",
+    "print(\"After inserting 25 at index 2:\", my_list)\n",
+    "\n",
+    "# Remove an element by index and return it\n",
+    "removed_element = my_list.pop(3)  # Removes the element at index 3 (which is now 50)\n",
+    "print(\"After popping the element at index 3:\", my_list)\n",
+    "print(\"Removed element:\", removed_element)\n",
+    "\n",
+    "# Extend the list with another list\n",
+    "my_list.extend([70, 80, 90])\n",
+    "print(\"After extending with [70, 80, 90]:\", my_list)\n",
+    "\n",
+    "# Clear all elements from the list\n",
+    "my_list.clear()\n",
+    "print(\"After clearing all elements:\", my_list)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "9e4e32ae-09f8-4970-9bf6-7e598068215a",
+   "metadata": {},
+   "source": [
+    "IMMUTABLE OBJECT >>>\n",
+    "\n",
+    "\n",
+    "Definition: Immutable objects are those whose state or value cannot be changed once they are created.\n",
+    "\n",
+    "Examples: Tuples, strings, and integers are common immutable types in Python.\n",
+    "\n",
+    "Characteristics:\n",
+    "\n",
+    "Non-Modifiable: You cannot change their contents or value; any modification creates a new object"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 5,
+   "id": "94d1abf5-ad33-41ae-b690-17ab25044616",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Original string: hello\n",
+      "New string after replacement: Hello\n",
+      "Original string remains unchanged: hello\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Create an initial string\n",
+    "original_string = \"hello\"\n",
+    "print(\"Original string:\", original_string)\n",
+    "\n",
+    "# Attempt to modify the string\n",
+    "new_string = original_string.replace(\"h\", \"H\")\n",
+    "print(\"New string after replacement:\", new_string)\n",
+    "print(\"Original string remains unchanged:\", original_string)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "ae2b6886-6127-40f4-a28c-65c8dcc66a71",
+   "metadata": {},
+   "source": [
+    "\n",
+    "COMPARISON >>>>>\n",
+    "\n",
+    "\n",
+    "Modification:\n",
+    "\n",
+    "Mutable: You can change the value of the object in place (e.g., adding items to a list).\n",
+    "Immutable: Any \"modification\" creates a new object rather than altering the original (e.g., modifying a string results in a new string).\n",
+    "\n",
+    "\n",
+    "Identity\n",
+    "\n",
+    "Mutable: The identity of the object remains constant even if its contents change. For example, a list’s identity (memory address) remains the same after appending an item.\n",
+    "Immutable: The identity changes when a new value is created. For example, changing a string creates a new string with a new identity.\n",
+    "\n",
+    "Performance:\n",
+    "\n",
+    "Mutable: Often more efficient for operations that involve frequent changes because it avoids the overhead of creating new objects.\n",
+    "Immutable: Can be less efficient for operations that involve frequent modifications, but they are often simpler and safer in multi-threaded environments due to their unchanging nature.\n",
+    "\n",
+    "Use Cases:\n",
+    "\n",
+    "Mutable: Useful when you need to change data in place, such as accumulating results or maintaining state.\n",
+    "Immutable: Useful for ensuring data integrity and when the data should not be changed, such as keys in dictionaries or elements in sets\n",
+    "\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "8f53127b-c946-4c64-8ee4-1c04925f998f",
+   "metadata": {},
+   "source": [
+    "(4)  Discuss the different types of operators in Python and provide examples of how they are used\n",
+    "\n",
+    "This is special keywords that are used to perform operation on variable \n",
+    "\n",
+    "ARTHMATICS OPERATORS \n",
+    "Arithmetic operators in Python are used to perform mathematical operations on numeric values. They include addition, subtraction, multiplication, division, modulus, exponentiation, and integer division.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 6,
+   "id": "9f238777-cbbb-4887-a94c-c3193c03ccdc",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Addition: 15\n"
+     ]
+    }
+   ],
+   "source": [
+    "x = 10\n",
+    "y = 5\n",
+    "result = x + y\n",
+    "print(\"Addition:\", result)  "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "52eb84a6-b6b2-4e29-931e-7cbc2727a169",
+   "metadata": {},
+   "source": [
+    "MODELUS OPERATORS >>>\n",
+    "The modulus operator (%) in Python is used to find the remainder of a division operation. It is a fundamental arithmetic operator and is particularly useful in various programming scenarios, such as checking if a number is even or odd, or cycling through a list of item\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 7,
+   "id": "844b0db2-55ef-4024-b347-a36972034408",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "14 is a multiple of 7\n"
+     ]
+    }
+   ],
+   "source": [
+    "number = 14\n",
+    "divisor = 7\n",
+    "if number % divisor == 0:\n",
+    "    print(number, \"is a multiple of\", divisor)\n",
+    "else:\n",
+    "    print(number, \"is not a multiple of\", divisor)\n",
+    "    "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "f36076e6-c35b-4847-80a4-a205625834dd",
+   "metadata": {},
+   "source": [
+    "FLOOR OPERATORS>>\n",
+    "    \n",
+    "     floor operators  which is denoted by //. This operator is used to perform division and then round down the result to the nearest integer. It essentially discards the fractional part and returns the largest integer less than or equal to the division result."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 8,
+   "id": "5af0b591-41b0-4143-aa3e-773370fe34c3",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Error: integer division or modulo by zero\n"
+     ]
+    }
+   ],
+   "source": [
+    "dividend = 10\n",
+    "divisor = 0\n",
+    "dividend = 10\n",
+    "divisor = 0\n",
+    "\n",
+    "try:\n",
+    "    result = dividend // divisor\n",
+    "except ZeroDivisionError as e:\n",
+    "    print(\"Error:\", e)  "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "6903dcfb-9039-445a-a4f0-2c44f33394eb",
+   "metadata": {},
+   "source": [
+    " COMPARISON OPERATORS >>>>\n",
+    "    Comparison operators in Python are used to compare values and determine the relationship between them. These operators return a Boolean value (True or False) based on the comparison result.\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 9,
+   "id": "72d3d381-6007-433a-aa3f-c15e66998a3d",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Equal to: True\n"
+     ]
+    }
+   ],
+   "source": [
+    "x = 5\n",
+    "y = 5\n",
+    "result = (x == y)\n",
+    "print(\"Equal to:\", result) "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "5aebd7c4-7c99-482f-abd5-3d5076480337",
+   "metadata": {},
+   "source": [
+    "LOGICAL OPERATORS >>>>\n",
+    "Logical operators in Python are used to combine conditional statements and perform logical operations. They are essential for controlling the flow of a program based on multiple conditions. Python provides three primary logical operators: and, or, and not.\n",
+    "\n",
+    "two types of logical operators>>\n",
+    "\n",
+    "Logical AND (and)\n",
+    "\n",
+    "Description: Returns True if both conditions are True. Otherwise, it returns False\n",
+    "\n",
+    "Logical OR (or)\n",
+    "\n",
+    "Description: Returns True if at least one of the conditions is True. Returns False only if both conditions are False."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 10,
+   "id": "503c44e5-19da-49c7-9e59-a95384a6f8d7",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Combined logical operators result: True\n"
+     ]
+    }
+   ],
+   "source": [
+    "x = 12\n",
+    "y = 4\n",
+    "z = 7\n",
+    "\n",
+    "result = (x > 10) and (y < 5) or (z == 7)\n",
+    "print(\"Combined logical operators result:\", result) "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "6d60749f-15fd-4309-b55a-e04512d2f36f",
+   "metadata": {},
+   "source": [
+    "MEMBERSHIP OPERATORS>>\n",
+    "Membership operators in Python are used to test whether a value or variable is found in a sequence\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 11,
+   "id": "e0d35ac8-7862-4a00-b1ed-a0a13574a29b",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "True"
+      ]
+     },
+     "execution_count": 11,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "a=(\"PW SKILLS\")\n",
+    "\"P\" in a"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "11ba688b-c761-4e25-b2eb-a9d16fdb3cf6",
+   "metadata": {},
+   "source": [
+    "ASSIGNMENT OPERATORS \n",
+    "assigning the variable"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "7087a156-4c89-4303-a0dd-39d3eb5d6b61",
+   "metadata": {},
+   "source": [
+    "COMPARISON OPERATORS >>\n",
+    "\n",
+    "compare two variable and return into boolean value\n",
+    "\n"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 12,
+   "id": "e72ff580-16e7-4b2d-8fa8-22bee2d869a0",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Combined comparison result: True\n"
+     ]
+    }
+   ],
+   "source": [
+    "\n",
+    "x = 10\n",
+    "y = 20\n",
+    "z = 15\n",
+    "\n",
+    "result = (x < y) and (z > x)\n",
+    "print(\"Combined comparison result:\", result)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "8c9e6ebb-75da-4929-b8de-b54715731a95",
+   "metadata": {},
+   "source": [
+    "BITWSE OPERATORS>>>>>\n",
+    "Bitwise operators in Python are used to perform operations at the bit level. These operators work with integers and manipulate their individual bits. Python supports several bitwise operators, including & (AND), | (OR), ^ (XOR), ~ (NOT), << (left shift), and >> (right shift)"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 13,
+   "id": "506c0511-20ab-492a-b762-3360312d2cca",
+   "metadata": {},
+   "outputs": [
+    {
+     "data": {
+      "text/plain": [
+       "'0b10010'"
+      ]
+     },
+     "execution_count": 13,
+     "metadata": {},
+     "output_type": "execute_result"
+    }
+   ],
+   "source": [
+    "bin(10)\n",
+    "bin(18)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "0412395f-4e63-4c90-8d94-a5a62917b126",
+   "metadata": {},
+   "source": [
+    "\n",
+    "SHIFT OPERATORS\n",
+    "\n",
+    "Shift operators in Python are used to move the bits of an integer to the left or right. This kind of bit manipulation can be useful in low-level programming, data compression, or performance optimization. There are two primary shift operators: left shift (<<) and right shift (>>).\n",
+    "\n",
+    "Left Shift (<<)\n",
+    "\n",
+    "Description: Moves the bits of a number to the left by a specified number of positions. This operation adds zeroes on the right and effectively multiplies the number "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 14,
+   "id": "4bd1a18c-c619-44cf-818e-89ecf91e825f",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Bitwise Left Shift: 20\n"
+     ]
+    }
+   ],
+   "source": [
+    "\n",
+    "# Binary representation of 5 is 0101\n",
+    "a = 5\n",
+    "# Shift the bits of 5 to the left by 2 positions\n",
+    "result = a << 2\n",
+    "print(\"Bitwise Left Shift:\", result)  "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "db5874e5-7963-48cd-afa2-3aed30995975",
+   "metadata": {},
+   "source": [
+    "Right Shift (>>)\n",
+    "\n",
+    "Description: Moves the bits of a number to the right by a specified number of positions. This operation discards the bits shifted out on the right and fills the leftmost bits with zeroes for positive numbers or the sign bit for negative numbers, effectively dividing the number "
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 15,
+   "id": "3503a6f6-6e7a-4643-a18e-2dec2836459f",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Bitwise Right Shift: 5\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Binary representation of 20 is 10100\n",
+    "a = 20\n",
+    "# Shift the bits of 20 to the right by 2 positions\n",
+    "result = a >> 2\n",
+    "print(\"Bitwise Right Shift:\", result)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "34467265-a57b-4f08-ade8-e3ebf8d9143e",
+   "metadata": {},
+   "source": [
+    "Explain the concept of type casting in python with example\n",
+    "\n",
+    "Type casting, or type conversion, in Python refers to the process of converting a value from one data type to another. Python provides several built-in functions to perform type casting, allowing you to change the type of variables and values as needed. This can be particularly useful when performing operations that require specific data types or when you need to ensure compatibility between different data types.\n",
+    "\n",
+    "Key Type Casting Functions\n",
+    "int(): Converts a value to an integer.\n",
+    "float(): Converts a value to a floating-point number.\n",
+    "str(): Converts a value to a string.\n",
+    "bool(): Converts a value to a boolean."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 16,
+   "id": "5c03ef2a-f73e-447a-a306-991eff351f25",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "Integer conversion: 10\n",
+      "String to Integer: 123\n",
+      "Integer to Boolean: False\n",
+      "Non-empty String to Boolean: True\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Converting a float to an integer\n",
+    "num_float = 10.99\n",
+    "num_int = int(num_float)\n",
+    "print(\"Integer conversion:\", num_int)  \n",
+    "\n",
+    "# Converting a string to an integer\n",
+    "num_str = \"123\"\n",
+    "num_int = int(num_str)\n",
+    "print(\"String to Integer:\", num_int)  \n",
+    "\n",
+    "# Converting an integer to a boolean\n",
+    "num_int = 0\n",
+    "bool_val = bool(num_int)\n",
+    "print(\"Integer to Boolean:\", bool_val)  \n",
+    "\n",
+    "# Converting a non-empty string to a boolean\n",
+    "non_empty_str = \"Hello\"\n",
+    "bool_val = bool(non_empty_str)\n",
+    "print(\"Non-empty String to Boolean:\", bool_val)  "
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "45477fd4-c598-4676-bf35-8741914b6031",
+   "metadata": {},
+   "source": [
+    "INSIGHTS>>>>>>>>>>>>>>>>>>>>\n",
+    "\n",
+    "Insights on Type Casting in Python\n",
+    "#Type casting is a fundamental concept in Python that allows you to convert values between different data types. This capability is essential for ensuring data compatibility and correctness in various operations\n",
+    "\n",
+    "Flexibility: Type casting allows Python to handle various data types and convert them as needed for different operations.\n",
+    "Precision: Be mindful of precision loss when converting from floats to integers.\n",
+    "Error Handling: Use error handling to manage invalid conversions.\n",
+    "String Conversion: Essential for formatting and displaying data.\n",
+    "Boolean Conversion: Useful for conditional logic and evaluations.\n",
+    "Compatibility: Ensures correct operations by aligning data types.\n",
+    "Dynamic Typing: Allows implicit conversions but explicit casting ensures correctness."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "cddddcab-2bf8-48bb-a637-40c26d4155c0",
+   "metadata": {},
+   "source": [
+    "(6) How do conditional statements work in python? illustraite with example\n",
+    "\n",
+    "Conditional statements in Python are used to execute code based on certain conditions. These statements allow your program to make decisions and execute different code paths depending on whether specific conditions are met. Python provides several types of conditional statements, including if, elif, and else.\n",
+    "\n",
+    "How Conditional Statements Work\n",
+    "\n",
+    "if Statement: This is used to evaluate a condition. If the condition is True, the code block under the if statement is executed.\n",
+    "\n",
+    "elif Statement: Short for \"else if\", this statement allows you to check multiple conditions after the initial if condition. It is optional and can be used multiple times.\n",
+    "\n",
+    "else Statement: This is used to execute code if none of the preceding conditions are met. It is optional and follows the if and elif statements."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 17,
+   "id": "1cbfa20f-caa5-404b-877f-110e9c11da86",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "The number is positive.\n",
+      "You are eligible to vote.\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Example: Check if a number is positive, negative, or zero\n",
+    "\n",
+    "number = 10\n",
+    "\n",
+    "if number > 0:\n",
+    "    print(\"The number is positive.\")\n",
+    "elif number < 0:\n",
+    "    print(\"The number is negative.\")\n",
+    "else:\n",
+    "    print(\"The number is zero.\")\n",
+    "    \n",
+    "    \n",
+    "    # Example: Check voting eligibility\n",
+    "\n",
+    "age = 20\n",
+    "is_citizen = True\n",
+    "\n",
+    "if age >= 18 and is_citizen:\n",
+    "    print(\"You are eligible to vote.\")\n",
+    "else:\n",
+    "    print(\"You are not eligible to vote.\")"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "9bb89340-5a9d-4775-8ce0-08cff7a090eb",
+   "metadata": {},
+   "source": [
+    "INSIGHTS>>>>>\n",
+    "\n",
+    "Summary\n",
+    "if Statement: Evaluates a condition and executes a block of code if the condition is True.\n",
+    "elif Statement: Allows for additional conditions if the previous if condition is False.\n",
+    "else Statement: Executes code if none of the preceding conditions are True.\n",
+    "Logical Operators: Combine multiple conditions for more complex checks."
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "57b7fdc8-face-4918-84f5-48ce997fac92",
+   "metadata": {},
+   "source": [
+    "Describe the different types of loops in python and their use cases with example \n",
+    "\n",
+    "In Python, loops are used to execute a block of code repeatedly based on certain conditions. Python provides several types of loops, each with its own use cases. The primary types of loops are the for loop and the while loop. Additionally, there are control statements like break and continue that influence loop execution. Here’s a detailed overview of each type and their use cases:\n",
+    "\n",
+    "1. for Loop\n",
+    "#The for loop is used to iterate over a sequence (like a list, tuple, string, or range) or other iterable objects. It is ideal for iterating through items where the number of iterations is known or can be determined by the iterable's length\n",
+    "#Use Cases:\n",
+    "\n",
+    "Iterating through items in a list or other iterable.\n",
+    "Performing an action a specific number of times using range"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 18,
+   "id": "dc59bfb4-1867-4e48-847e-4a3ed53f5903",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "apple\n",
+      "banana\n",
+      "cherry\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Example: Iterating through a list\n",
+    "\n",
+    "fruits = [\"apple\", \"banana\", \"cherry\"]\n",
+    "\n",
+    "for fruit in fruits:\n",
+    "    print(fruit)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "c4113db5-1bf0-40a5-bea1-dbbd5074744a",
+   "metadata": {},
+   "source": [
+    " 2 while Loop\n",
+    "The while loop repeatedly executes a block of code as long as a specified condition is True. It is used when the number of iterations is not known beforehand and depends on the condition.\n",
+    "#Use Cases:\n",
+    "\n",
+    "Repeating an action until a condition changes.\n",
+    "Creating loops where the number of iterations is not fixed"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 20,
+   "id": "aaff294e-36ab-4500-8fc5-df0bf2297765",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "0\n",
+      "1\n",
+      "2\n",
+      "3\n",
+      "4\n"
+     ]
+    }
+   ],
+   "source": [
+    "# Example: \n",
+    "\n",
+    "count = 0\n",
+    "\n",
+    "while count < 5:\n",
+    "    print(count)\n",
+    "    count += 1"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "c184028a-d98c-44d0-821a-8c43269f4146",
+   "metadata": {},
+   "source": [
+    "    \n",
+    "Control Statements in Loops\n",
+    "Control statements can modify the flow of loops:\n",
+    "\n",
+    " break Statement\n",
+    "\n",
+    "The break statement exits the loop prematurely, regardless of the loop's condition."
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": 25,
+   "id": "ecc87c2e-7435-4fd5-9a70-c45f78f9f210",
+   "metadata": {},
+   "outputs": [
+    {
+     "name": "stdout",
+     "output_type": "stream",
+     "text": [
+      "0\n",
+      "1\n",
+      "2\n",
+      "3\n",
+      "4\n"
+     ]
+    }
+   ],
+   "source": [
+    " \n",
+    "\n",
+    "for i in range(10):\n",
+    "    if i == 5:\n",
+    "        break\n",
+    "    print(i)"
+   ]
+  },
+  {
+   "cell_type": "markdown",
+   "id": "2d4bb286-306e-4f80-9f16-12b610d64f44",
+   "metadata": {},
+   "source": [
+    "INSIGHTS>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>\n",
+    "    \n",
+    "    \n",
+    "for Loop: Ideal for iterating over sequences or a known range of numbers.\n",
+    "while Loop: Best for situations where the number of iterations is not known and depends on a condition.\n",
+    "Control Statements: break to exit loops prematurely, continue to skip the current iteration, and else to execute code after the loop finishes without a break"
+   ]
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "cc0528e9-9a92-4382-abc5-063e0a623214",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  },
+  {
+   "cell_type": "code",
+   "execution_count": null,
+   "id": "ee9ca12c-3f33-43c4-a167-66785a7b8613",
+   "metadata": {},
+   "outputs": [],
+   "source": []
+  }
+ ],
+ "metadata": {
+  "kernelspec": {
+   "display_name": "Python 3 (ipykernel)",
+   "language": "python",
+   "name": "python3"
+  },
+  "language_info": {
+   "codemirror_mode": {
+    "name": "ipython",
+    "version": 3
+   },
+   "file_extension": ".py",
+   "mimetype": "text/x-python",
+   "name": "python",
+   "nbconvert_exporter": "python",
+   "pygments_lexer": "ipython3",
+   "version": "3.10.8"
+  }
+ },
+ "nbformat": 4,
+ "nbformat_minor": 5
+}
